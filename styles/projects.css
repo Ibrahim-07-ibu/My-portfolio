@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #183c45;
+    color: #fff;
+    height: 100%;
+    
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: #68a3b2;
+}
+
+.logo {
+    margin-left: 20px;
+    letter-spacing: 2px;
+    font-size: 18px;
+}
+
+.nav-links a {
+    padding: 10px 30px;
+    border-radius: 20px;
+    color: #000000;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-links a:hover {
+    background: #5b8fa5;
+    color: #000;
+    transition: 0.19s;
+}
+.projects-page {
+  min-height: calc(100vh - 80px);
+  padding: 80px 60px;
+  background: #183c45;
+  color: #ffffff;
+  text-align: center;
+}
+
+.projects-page h1 {
+  font-size: 36px;
+  letter-spacing: 2px;
+}
+
+.section-line {
+  width: 60px;
+  height: 2px;
+  background: #38bdf8;
+  margin: 20px auto 60px;
+}
+
+.projects-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.project-card {
+  width: 340px;
+  background: #0f3d4c;
+  padding: 30px;
+  border-radius: 16px;
+  text-align: left;
+}
+
+.project-card h2 {
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.project-desc {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #e5e7eb;
+  margin-bottom: 16px;
+}
+
+.project-features {
+  margin-bottom: 16px;
+  padding-left: 18px;
+}
+
+.project-features li {
+  font-size: 13px;
+  color: #e5e7eb;
+  margin-bottom: 6px;
+}
+
+.project-tech {
+  font-size: 13px;
+  color: #38bdf8;
+  margin-bottom: 20px;
+}
+
+.project-links a {
+  margin-right: 14px;
+  padding: 8px 18px;
+  text-decoration: none;
+  font-size: 12px;
+  border-radius: 16px;
+  background: #38bdf8;
+  color: #0f172a;
+}
+
+.project-links a:hover {
+  background: #0ea5e9;
+}
+
+@media (max-width: 768px) {
+  .projects-page {
+    padding: 60px 30px;
+  }
+
+  .project-card {
+    width: 100%;
+    max-width: 380px;
+  }
+}
