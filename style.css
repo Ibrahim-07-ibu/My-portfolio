@@ -376,7 +376,74 @@
       margin: 0 auto;
 
     }
+/* ================================
+   LIFE SKILL PROJECT SECTION
+================================ */
+#life-projects {
+  padding: 100px 8%;
+  text-align: center;
+}
 
+/* Reuse project grid but force single card center */
+#life-projects .projects-grid {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+/* Life Skill Card Styling */
+#life-projects .card {
+  width: 540px;
+  height: 450px;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  text-align: left;
+}
+
+/* Image Box */
+#life-projects .project-image-box {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+#life-projects .project-image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+/* Hover Effects */
+#life-projects .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
+}
+
+#life-projects .card:hover img {
+  transform: scale(1.05);
+}
+
+/* Text Styling */
+#life-projects .card h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+
+#life-projects .card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: white;
+}
     /* ================= CONTACT ================= */
     .contact-cards {
       display: grid;
