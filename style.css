@@ -380,7 +380,7 @@ section {
 
 /* Image Container */
 .project-image-box {
-  height: 320px;
+  height: 330px;
   overflow: hidden;
   border-radius: 14px;
   margin-bottom: 16px;
@@ -388,6 +388,43 @@ section {
   align-items: center;
   justify-content: center;
   background: rgba(0, 0, 0, 0.12);
+}
+
+.projects-grid {
+  align-items: stretch;
+  /* force equal height grid items */
+}
+
+.project-link {
+  height: 100%;
+  /* allow anchor to stretch */
+  display: flex;
+}
+
+.project-link .card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Push text area to fill space evenly */
+.project-link .card p {
+  margin-top: auto;
+}
+
+/* ================= FIX BLUE TEXT IN TECH PROJECTS ================= */
+
+/* Force all text inside project links to use theme color */
+.project-link,
+.project-link * {
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+/* Optional: prevent visited links from changing color */
+.project-link:visited,
+.project-link:visited * {
+  color: var(--text-primary);
 }
 
 /* Image Styling */
@@ -405,8 +442,14 @@ section {
 
 .center-project {
   grid-column: 1 / -1;
-  justify-self: center;
+  /* span full grid row */
+  display: flex;
+  justify-content: center;
+}
+
+.center-project .card {
   max-width: 520px;
+  width: 100%;
 }
 
 
@@ -414,21 +457,20 @@ section {
    LIFE SKILL PROJECT SECTION
 ================================ */
 #life-projects {
-  padding: 100px 8%;
+  padding: 120px 40px;
   text-align: center;
 }
 
-/* Reuse project grid but force single card center */
-#life-projects .projects-grid {
+.life-project-wrapper {
   display: flex;
   justify-content: center;
   margin-top: 50px;
 }
 
 /* Life Skill Card Styling */
-#life-projects .card {
+.life-project-card {
   width: 540px;
-  height: 450px;
+  max-width: 100%;
   background: rgba(255, 255, 255, 0.06);
   backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.12);
@@ -440,7 +482,7 @@ section {
 }
 
 /* Image Box */
-#life-projects .project-image-box {
+.life-project-card .project-image-box {
   width: 100%;
   height: 250px;
   overflow: hidden;
@@ -448,7 +490,7 @@ section {
   margin-bottom: 15px;
 }
 
-#life-projects .project-image-box img {
+.life-project-card .project-image-box img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -456,24 +498,24 @@ section {
 }
 
 /* Hover Effects */
-#life-projects .card:hover {
+.life-project-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
 }
 
-#life-projects .card:hover img {
+.life-project-card:hover img {
   transform: scale(1.05);
 }
 
 /* Text Styling */
-#life-projects .card h3 {
+.life-project-card h3 {
   font-size: 1.3rem;
   font-weight: 600;
   margin-bottom: 8px;
   color: #ffffff;
 }
 
-#life-projects .card p {
+.life-project-card p {
   font-size: 0.95rem;
   line-height: 1.6;
   color: white;
